@@ -1,0 +1,12 @@
+.app {
+  margin: 0;
+  height: 100vh;
+
+  font-family: 'LuckiestGuy', 'Indie Flower', 'Khula', sans-serif;
+  color: #000;
+  text-align: center;
+
+  overflow: hidden;
+  box-sizing: border-box;
+  background: linear-gradient(90deg, darkslategrey 0%, #3b6363 100%);
+}
