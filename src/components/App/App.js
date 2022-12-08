@@ -1,4 +1,5 @@
 import React from 'react';
+import { Route, Switch } from 'react-router-dom';
 
 import Start from '../Start/Start';
 import GameOptions from '../GameOptions/GameOptions';
@@ -11,11 +12,23 @@ export default function App() {
     return (
         <div className="app">
             <div className="app__page">
-                {/*<Start goToGameOptions="/" />*/}
+                <Switch>
+                    <Route exact path="/">
+                        <Start goToGameOptions="/options" />
+                    </Route>
 
-                <GameOptions />
+                    <Route path="/options">
+                        <GameOptions goToStart="/" />
+                    </Route>
 
-                {/*<Game />*/}
+                    <Route path="/game">
+                        <Game
+                            isGame={true}
+                            goToStart="/"
+                            goToGameOptions="/options"
+                        />
+                    </Route>
+                </Switch>
             </div>
         </div>
     );

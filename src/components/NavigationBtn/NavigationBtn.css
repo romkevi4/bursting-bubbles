@@ -1,0 +1,25 @@
+/* NavigationBtn */
+.navigation-btn {
+  font-family: 'Indie Flower', sans-serif;
+  color: #1f1539;
+  font-size: 80px;
+  text-decoration: none;
+
+  transition: color 180ms linear 30ms;
+}
+
+.navigation-btn:hover {
+  color: #16D9E3;
+}
+
+.navigation-btn_position_left {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+}
+
+.navigation-btn_position_right {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+}

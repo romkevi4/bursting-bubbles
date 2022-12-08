@@ -1,6 +1,8 @@
 import React from 'react';
-import { Link } from 'react-router-dom'
-import './Start.css'
+
+import NavigationBtn from '../NavigationBtn/NavigationBtn';
+
+import './Start.css';
 
 
 export default function Start({ goToGameOptions }) {
@@ -24,12 +26,12 @@ export default function Start({ goToGameOptions }) {
                 <span className="start__title-jumping">e</span>
                 <span className="start__title-jumping">s</span>
             </h1>
-            <Link
-                to={goToGameOptions}
-                className="start__link" id="start"
-            >
-                Start game
-            </Link>
+
+            <NavigationBtn
+                goToPage={goToGameOptions}
+                nameBtn="Start game"
+                modifierClass=""
+            />
         </div>
     );
 }

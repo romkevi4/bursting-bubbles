@@ -1,15 +1,7 @@
 /* Game-options */
 .game-options {
   margin: auto;
-}
-
-.game-options__title {
-  margin: 0 0 80px;
-
-  font-family: 'TitanOne-Regular', sans-serif;
-  color: #fff;
-  font-size: 80px;
-  font-weight: normal;
+  /*position: relative;*/
 }
 
 .game-options__box-btn {
@@ -19,8 +11,7 @@
 }
 
 .game-options__time-btn {
-  padding: 10px 20px;
-  width: 150px;
+  width: 160px;
   height: 70px;
 
   background-color: transparent;
@@ -28,8 +19,8 @@
   border-radius: 10px;
   color: #1f1539;
   cursor: pointer;
-  font-family: Indie Flower, sans-serif;
-  font-size: 35px;
+  font-family: 'Indie Flower', sans-serif;
+  font-size: 50px;
 
   transition: all 180ms linear 30ms;
 }

@@ -8,21 +8,8 @@
 
   font-family: 'LuckiestGuy', sans-serif;
   color: #fff;
-  font-size: 150px;
+  font-size: 200px;
   letter-spacing: 10px;
-}
-
-.start__link {
-  font-family: 'Indie Flower', sans-serif;
-  color: #1f1539;
-  font-size: 80px;
-  text-decoration: none;
-
-  transition: color 200ms linear 30ms;
-}
-
-.start__link:hover {
-  color: #16D9E3;
 }
 
 .rubberBand {
@@ -38,7 +25,7 @@
 .start__title-jumping {
   opacity: 1;
   display: inline-block;
-  transition: all .3s ease-out, color 200ms linear 30ms;
+  transition: all .3s ease-out, color 180ms linear 30ms;
 }
 
 /* TODO: Подумать, нужно ли свойство при наведении*/
