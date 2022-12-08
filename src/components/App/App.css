@@ -8,5 +8,11 @@
 
   overflow: hidden;
   box-sizing: border-box;
-  background: linear-gradient(90deg, darkslategrey 0%, #3b6363 100%);
+  background: linear-gradient(90deg, #263f3f 0%, #3b6363 100%);
+}
+
+.app__page {
+  display: flex;
+  width: 100%;
+  height: 100%;
 }

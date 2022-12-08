@@ -1,0 +1,41 @@
+/* Game-options */
+.game-options {
+  margin: auto;
+}
+
+.game-options__title {
+  margin: 0 0 80px;
+
+  font-family: 'TitanOne-Regular', sans-serif;
+  color: #fff;
+  font-size: 80px;
+  font-weight: normal;
+}
+
+.game-options__box-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.game-options__time-btn {
+  padding: 10px 20px;
+  width: 150px;
+  height: 70px;
+
+  background-color: transparent;
+  border: 2px solid #1f1539;
+  border-radius: 10px;
+  color: #1f1539;
+  cursor: pointer;
+  font-family: Indie Flower, sans-serif;
+  font-size: 35px;
+
+  transition: all 180ms linear 30ms;
+}
+
+.game-options__time-btn:hover {
+  border-color: #16D9E3;
+  color: #16D9E3;
+
+}

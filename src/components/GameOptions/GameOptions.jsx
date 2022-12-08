@@ -4,33 +4,26 @@ import './GameOptions.css'
 
 export default function GameOptions() {
     return (
-        <>
-            <h2>Выберите время</h2>
-            <ul className="time-list" id="time-list">
-                <li>
-                    <button className="time-btn" data-time="10">
-                        10 сек
-                    </button>
-                </li>
+        <div className="game-options">
+            <h2 className="game-options__title">Select game time</h2>
 
-                <li>
-                    <button className="time-btn" data-time="20">
-                        20 сек
-                    </button>
-                </li>
+            <div className="game-options__box-btn">
+                <button className="game-options__time-btn" data-time="10">
+                    10 sec
+                </button>
 
-                <li>
-                    <button className="time-btn" data-time="30">
-                        30 сек
-                    </button>
-                </li>
+                <button className="game-options__time-btn" data-time="20">
+                    20 sec
+                </button>
 
-                <li>
-                    <button className="time-btn" data-time="60">
-                        60 сек
-                    </button>
-                </li>
-            </ul>
-        </>
+                <button className="game-options__time-btn" data-time="30">
+                    30 sec
+                </button>
+
+                <button className="game-options__time-btn" data-time="60">
+                    60 sec
+                </button>
+            </div>
+        </div>
     );
 }

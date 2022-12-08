@@ -10,13 +10,13 @@ import './App.css';
 export default function App() {
     return (
         <div className="app">
-            <>
-                <Start goToGameOptions="/" />
+            <div className="app__page">
+                {/*<Start goToGameOptions="/" />*/}
 
                 <GameOptions />
 
-                <Game />
-            </>
+                {/*<Game />*/}
+            </div>
         </div>
     );
 }
