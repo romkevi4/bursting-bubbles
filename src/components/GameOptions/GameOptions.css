@@ -1,7 +1,6 @@
 /* Game-options */
 .game-options {
   margin: auto;
-  /*position: relative;*/
 }
 
 .game-options__box-btn {
@@ -28,5 +27,4 @@
 .game-options__time-btn:hover {
   border-color: #16D9E3;
   color: #16D9E3;
-
 }

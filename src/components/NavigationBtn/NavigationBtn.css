@@ -1,9 +1,15 @@
 /* NavigationBtn */
+.navigation {
+  display: flex;
+  justify-content: center;
+}
+
 .navigation-btn {
   font-family: 'Indie Flower', sans-serif;
   color: #1f1539;
   font-size: 80px;
   text-decoration: none;
+  z-index: 1;
 
   transition: color 180ms linear 30ms;
 }

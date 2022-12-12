@@ -6,11 +6,13 @@ import './NavigationBtn.css';
 
 export default function NavigationBtn({ goToPage, nameBtn, modifierClass }) {
     return (
-        <Link
-            to={goToPage}
-            className={`navigation-btn ${modifierClass}`}
-        >
-            {nameBtn}
-        </Link>
+        <div className="navigation">
+            <Link
+                to={goToPage}
+                className={`navigation-btn ${modifierClass}`}
+            >
+                {nameBtn}
+            </Link>
+        </div>
     )
 }

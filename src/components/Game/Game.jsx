@@ -1,7 +1,7 @@
 import React from 'react';
 
-import Title from '../Title/Title';
-import Circle from '../Circle/Circle';
+import Subtitle from '../Subtitle/Subtitle.jsx';
+import Circle from './Circle/Circle';
 import Score from '../Score/Score';
 import NavigationBtn from '../NavigationBtn/NavigationBtn';
 
@@ -11,10 +11,10 @@ import './Game.css'
 export default function Game({ isGame, goToStart, goToGameOptions }) {
     return (
         <div className="game">
-            <Title>
+            <Subtitle>
                 Time left:&nbsp;
                 <span className="game__title-timer" id="time">00:00</span>
-            </Title>
+            </Subtitle>
 
             <div className="game__board" id="board">
                 {/*{*/}

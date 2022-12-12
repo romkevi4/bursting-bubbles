@@ -1,17 +1,17 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
-import Title from '../Title/Title';
+import Subtitle from '../Subtitle/Subtitle.jsx';
 import NavigationBtn from '../NavigationBtn/NavigationBtn';
+
 import './GameOptions.css';
 
 
 export default function GameOptions({ goToStart }) {
     return (
         <div className="game-options">
-            <Title>
+            <Subtitle>
                 Select game time
-            </Title>
+            </Subtitle>
 
             <div className="game-options__box-btn">
                 <button className="game-options__time-btn" data-time="10">
