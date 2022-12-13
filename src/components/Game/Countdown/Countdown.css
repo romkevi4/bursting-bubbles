@@ -1,0 +1,35 @@
+/* Countdown */
+.countdown {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  /*visibility: hidden;*/
+  opacity: 1;
+  /*transition: visibility 0s .4s, opacity .4s 0s, z-index 0s .4s;*/
+}
+
+.countdown:before {
+  position: absolute;
+  content: "";
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #000;
+  opacity: .3;
+  z-index: -1;
+}
+
+.countdown__value {
+  margin: auto;
+
+  font-family: 'Indie Flower', sans-serif;
+  color: #CC2306FF;
+  font-size: 600px;
+  z-index: 1;
+}

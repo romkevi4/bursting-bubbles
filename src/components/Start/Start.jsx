@@ -1,6 +1,6 @@
-import React, { useState, useEffect} from 'react';
+import React from 'react';
 
-import Balls from './Bubbles/Bubbles';
+import Bubbles from './Bubbles/Bubbles';
 import NavigationBtn from '../NavigationBtn/NavigationBtn';
 
 import './Start.css';
@@ -18,7 +18,7 @@ export default function Start({ goToGameOptions }) {
                 modifierClass=""
             />
 
-            <Balls />
+            <Bubbles />
         </div>
     );
 }

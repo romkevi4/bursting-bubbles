@@ -1,12 +1,12 @@
 const colors = [
-    '#ba55d3', '#41c01e', '#faf0e6', '#0f7f47', '#bc8f8f', '#fa8072',
-    '#87ceeb', '#5a1d1d', '#a52a2a', '#008080', '#000080', '#808000',
-    '#98FB98', '#071e48', '#00BFFF', '#1E90FF', '#4169E1', '#7B68EE',
-    '#0273c5', '#945b07', '#FA8072', '#FF7F50', '#EE82EE', '#FFB6C1',
-    '#189086', '#9400D3', '#b607e5', '#F0E68C', '#800000', '#FFFACD',
-    '#411e5a', '#10E59DFF', '#e5e015', '#CC2306FF', '#0652DCFF', '#CE077EFF',
-    '#0273C5FF', '#F16363FF', '#0F7F47FF', '#B607E5FF', '#E5E015FF', '#189086FF',
-    '#053e19', '#053E19FF', '#411E5AFF', '#071E48FF', '#5A1D1DFF', '#945B07FF'
+    '#ba55d3', '#41c01e', '#ca751e', '#085830FF', '#bc8f8f', '#fa8072',
+    '#6ecbf1', '#400164', '#a52a2a', '#008080', '#000080', '#808000',
+    '#98FB98', '#0b2f71', '#00BFFF', '#660a7b', '#4169E1', '#7B68EE',
+    '#012C4CFF', '#C7CE0DFF', '#059792FF', '#5e07c8', '#EE82EE', '#FFB6C1',
+    '#189086', '#b21c49', '#b607e5', '#0a0ed0', '#800000', '#FFFACD',
+    '#411e5a', '#10E59DFF', '#D007BFFF', '#CC2306FF', '#0652DCFF', '#CE077EFF',
+    '#0273C5FF', '#F16363FF', '#0F7F47FF', '#07e5cb', '#E5E015FF', '#189086FF',
+    '#053e19', '#0b6663', '#411E5AFF', '#a70c5a', '#5A1D1DFF', '#945B07FF'
 ];
 
 const MIN_DURATION = 10;
@@ -18,8 +18,14 @@ const MAX_DELAY = 3;
 const MIN_POSITION = 0;
 const MAX_POSITION = 100;
 
-const MIN_SIZE = .3;
-const MAX_SIZE = 1;
+const MIN_POSITION_CIRCLE = 0;
+const MAX_POSITION_CIRCLE = 500;
+
+const MIN_SIZE_BUBBLE = .3;
+const MAX_SIZE_BUBBLE = 1;
+
+const MIN_SIZE_CIRCLE = 10;
+const MAX_SIZE_CIRCLE = 60;
 
 export {
     colors,
@@ -29,6 +35,10 @@ export {
     MAX_DELAY,
     MIN_POSITION,
     MAX_POSITION,
-    MIN_SIZE,
-    MAX_SIZE
+    MIN_POSITION_CIRCLE,
+    MAX_POSITION_CIRCLE,
+    MIN_SIZE_BUBBLE,
+    MAX_SIZE_BUBBLE,
+    MIN_SIZE_CIRCLE,
+    MAX_SIZE_CIRCLE
 };

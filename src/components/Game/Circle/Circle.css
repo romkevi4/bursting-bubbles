@@ -1,9 +1,5 @@
 /* Circle */
 .circle {
-  width: 50px;
-  height: 50px;
-
-  background: linear-gradient(90deg, #16D9E3 0%, #30C7EC 47%, #46AEF7 100%);
   position: absolute;
   border-radius: 50%;
   cursor: pointer;
@@ -12,6 +8,6 @@
 }
 
 .circle:hover {
-  width: 200px;
-  height: 200px;
+  /*width: 200px;*/
+  /*height: 200px;*/
 }
