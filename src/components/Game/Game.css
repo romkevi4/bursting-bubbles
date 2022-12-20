@@ -1,0 +1,30 @@
+/* Game */
+.game {
+  margin: auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.game__title-timer {
+  color: #16D9E3;
+  font-family: Indie Flower, sans-serif;
+  font-size: 145px;
+  line-height: 1;
+}
+
+.game__board {
+  width: 500px;
+  height: 500px;
+
+  background: linear-gradient(118.38deg, #1e3232 -4.6%, #3b6363 200.44%);
+  box-shadow: -8px -8px 30px #2A333D, 10px 7px 20px #475462;
+  border-radius: 30px;
+  overflow: hidden;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
