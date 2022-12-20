@@ -3,7 +3,7 @@
   width: 100%;
   height: 100%;
 
-  display: flex;
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -11,6 +11,10 @@
   /*visibility: hidden;*/
   opacity: 1;
   /*transition: visibility 0s .4s, opacity .4s 0s, z-index 0s .4s;*/
+}
+
+.countdown_active {
+  display: flex;
 }
 
 .countdown:before {
@@ -21,7 +25,7 @@
   left: 0;
   right: 0;
   background-color: #000;
-  opacity: .3;
+  opacity: .6;
   z-index: -1;
 }
 

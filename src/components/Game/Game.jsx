@@ -13,7 +13,10 @@ import './Game.css'
 
 export default function Game({ goToStart, goToGameOptions }) {
     const {
+        isCountdown,
         isGame,
+        countdownValue,
+        setCountdownValue,
         setIsGame,
         isStart,
         setIsStart,
@@ -35,20 +38,18 @@ export default function Game({ goToStart, goToGameOptions }) {
 
     }
 
-    function useCountdown() {
-        useEffect(() => {
-            const readiness = setTimeout(() => {
-                setInterval(() => {
-                    return (
-                        <Countdown value={1} />
-                    );
-                }, 1000);
-
-            }, 3000);
-
-            return () => clearTimeout(readiness);
-        }, []);
-    }
+    // function useCountdown() {
+    //     useEffect(() => {
+    //         let i = 0;
+    //         const readiness = setInterval(() => {
+    //             return (
+    //                 <Countdown value={++i} />
+    //             );
+    //         }, 1000);
+    //
+    //         return () => clearTimeout(readiness);
+    //     }, []);
+    // }
 
 
 
@@ -56,13 +57,15 @@ export default function Game({ goToStart, goToGameOptions }) {
         <div className="game">
             <Subtitle>
                 Time left:&nbsp;
-                <span className="game__title-timer" id="time">{`00:${time}`}</span>
+                <p className="game__title-timer">{timeGame < 10 ? `00:0${timeGame}` : `00:${timeGame}`}</p>
             </Subtitle>
 
             <div className="game__board">
-                {
-                    isGame ? <Circle isGame={isGame} /> : <Score />
-                }
+                <Countdown value={countdownValue} isCountdown={isCountdown} />
+
+                {/*{*/}
+                {/*    isGame ? <Circle isGame={isGame} /> : <Score />*/}
+                {/*}*/}
 
                 {/*<Score />*/}
             </div>

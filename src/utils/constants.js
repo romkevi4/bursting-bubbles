@@ -9,6 +9,8 @@ const colors = [
     '#053e19', '#0b6663', '#411E5AFF', '#a70c5a', '#5A1D1DFF', '#945B07FF'
 ];
 
+const countdownText = ['3', '2', '1', 'Go!'];
+
 const MIN_DURATION = 10;
 const MAX_DURATION = 20;
 
@@ -29,6 +31,7 @@ const MAX_SIZE_CIRCLE = 60;
 
 export {
     colors,
+    countdownText,
     MIN_DURATION,
     MAX_DURATION,
     MIN_DELAY,

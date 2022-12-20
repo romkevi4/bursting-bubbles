@@ -17,29 +17,30 @@ export default function GameOptions({ goToStart, goToGame }) {
         setTimeGame,
         time,
         setTime,
+        handleStartGame
     } = useContext(GameContext);
 
-    const handleStartGame = (value) => {
-        setIsGame(true);
-        setTimeGame(value);
-        setInterval(decreaseTime, 1000);
-    }
+    // const handleStartGame = (value) => {
+    //     setIsGame(true);
+    //     setTimeGame(value);
+    //     setInterval(decreaseTime, 1000);
+    // }
 
-    function decreaseTime() {
-        if (timeGame !== 0) {
-            setTime(--timeGame);
-
-            timeGame < 10 && (setTime(`0${timeGame}`));
-
-        } else {
-            finishGame();
-        }
-    }
-
-    function finishGame() {
-        setIsGame(false);
-
-    }
+    // function decreaseTime() {
+    //     if (timeGame !== 0) {
+    //         setTime(--timeGame);
+    //
+    //         timeGame < 10 && (setTime(`0${timeGame}`));
+    //
+    //     } else {
+    //         finishGame();
+    //     }
+    // }
+    //
+    // function finishGame() {
+    //     setIsGame(false);
+    //
+    // }
 
     return (
         <div className="game-options">
