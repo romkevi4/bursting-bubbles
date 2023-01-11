@@ -2,7 +2,7 @@ import React from 'react';
 import uniqId from 'uniqid';
 
 import {
-    colors,
+    COLORS,
     MIN_DURATION,
     MAX_DURATION,
     MIN_DELAY,
@@ -19,8 +19,8 @@ import './Bubbles.css';
 export default function Bubbles() {
     const bubblesElemStyles = {
         bubblesElem: () => {
-            const index = Math.round(Math.random() * colors.length);
-            const color = colors[index];
+            const index = Math.round(Math.random() * (COLORS.length - 1));
+            const color = COLORS[index];
 
             return {
                 background: `linear-gradient(90deg, ${color} 0%, ${color} 100%)`
@@ -28,19 +28,15 @@ export default function Bubbles() {
         }
     }
 
-    function getRandomNumber(min, max) {
-        return Math.random() * (max - min) + min;
-    }
-
     const bubblesElemAnimationStyles = {
         bubblesElemAnimation: () => {
-            const valueDuration = parseFloat(getRandomNumber(MIN_DURATION, MAX_DURATION).toFixed(1));
-            const valueDelay = parseFloat(getRandomNumber(MIN_DELAY, MAX_DELAY).toFixed(1));
+            const valueDuration = changeRandomValue(MIN_DURATION, MAX_DURATION);
+            const valueDelay = changeRandomValue(MIN_DELAY, MAX_DELAY);
 
             const valuePositionLeft = Math.round(getRandomNumber(MIN_POSITION, MAX_POSITION));
             const valuePositionTop = Math.round(getRandomNumber(MIN_POSITION, MAX_POSITION));
 
-            const valueSizeBubble = parseFloat(getRandomNumber(MIN_SIZE_BUBBLE, MAX_SIZE_BUBBLE).toFixed(1));
+            const valueSizeBubble = changeRandomValue(MIN_SIZE_BUBBLE, MAX_SIZE_BUBBLE);
 
             return {
                 animation: `animateBubble ${valueDuration}s linear infinite, sideWays ${valueDelay}s ease-in-out infinite alternate`,
@@ -51,11 +47,19 @@ export default function Bubbles() {
         }
     }
 
+    function getRandomNumber(min, max) {
+        return Math.random() * (max - min) + min;
+    }
+
+    function changeRandomValue(minValue, maxValue) {
+        return parseFloat(getRandomNumber(minValue, maxValue)).toFixed(1);
+    }
+
 
     return (
         <div className="bubbles">
             {
-                colors.map(() => {
+                COLORS.map(() => {
                     const id = uniqId();
 
                     return (

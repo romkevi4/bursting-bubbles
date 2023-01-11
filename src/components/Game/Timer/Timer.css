@@ -1,0 +1,11 @@
+/* Timer */
+.timer {
+  margin: 0;
+  min-width: 290px;
+
+  color: #16D9E3;
+  font-family: Indie Flower, sans-serif;
+  font-size: 145px;
+  line-height: 1;
+  text-align: left;
+}

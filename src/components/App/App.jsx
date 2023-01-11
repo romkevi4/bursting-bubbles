@@ -1,67 +1,58 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Route, Switch } from 'react-router-dom';
 
 import Start from '../Start/Start';
 import GameOptions from '../GameOptions/GameOptions';
 import Game from '../Game/Game';
 
+import { COUNTDOWN_TEXT } from '../../utils/constants';
 import { GameContext } from '../../contexts/GameContext';
-import { countdownText } from '../../utils/constants';
 
 import './App.css'
 
 export default function App() {
     const [ isCountdown, setIsCountdown] = useState(false);
-    const [ countdownValue, setCountdownValue ] = useState('');
-
-    const [ reverseCounter, setReverseCounter ] = useState(3);
-    const [ isGame, setIsGame ] = useState(false);
+    const [ countdownValue, setCountdownValue ] = useState(3);
     const [ isStart, setIsStart ] = useState(false);
+
+    const [ durationGame, setDurationGame ] = useState(0);
+    const [ isGame, setIsGame ] = useState(false);
+
+
+
+
     const [ score, setScore ] = useState(0);
-    const [ timeGame, setTimeGame ] = useState(0);
     const [ time, setTime ] = useState(0);
     const [ widthBoard, setWidthBoard ] = useState(0);
     const [ heightBoard, setHeightBoard ] = useState(0);
 
     const handleStartGame = (value) => {
-        setCountdown();
-        // setIsGame(true);
-        setTimeGame(value);
-        // setInterval(decreaseTime, 1000);
-    }
-
-    function setCountdown() {
         setIsCountdown(true);
-
-        // setInterval(() => {
-        //     countdownText.forEach(item => {
-        //         const readiness = setTimeout(() => {
-        //             console.log(item);
-        //             setCountdownValue(item)
-        //         }, 1000);
-        //     });
-        // }, 1000);
-
-        let i = 0;
-        while (i < countdownText.length) {
-            setTimeout(() => {
-                console.log(countdownText[i]);
-                setCountdownValue(countdownText[i]);
-            }, 1000);
-
-            i++;
-        }
-
-
-        setTimeout(() => {
-            // console.log(isCountdown);
-            setIsCountdown(false);
-            setCountdownValue('');
-            // console.log(isCountdown);
-        }, 5000);
-
-        // return () => clearTimeout(readiness);
+        setIsStart(true);
+        setDurationGame(value);
     }
+
+    // useEffect(() =>
+    //     const interval = setInterval(() => {
+    //         console.log(countdownValue);
+    //
+    //         if (countdownValue === 'Go!') {
+    //             setIsCountdown(false);
+    //             clearInterval(interval);
+    //
+    //         } else if (countdownValue === 1) {
+    //             setCountdownValue('Go!');
+    //
+    //         } else {
+    //             let value = countdownValue - 1;
+    //             setCountdownValue(value);
+    //         }
+    //     }, 1000);
+    //
+    //     return () => clearInterval(interval);
+    // }, [countdownValue]);
+
+
 
     // function decreaseTime() {
     //     if (timeGame !== 0) {
@@ -100,8 +91,8 @@ export default function App() {
                             setIsStart,
                             score,
                             setScore,
-                            timeGame,
-                            setTimeGame,
+                            durationGame,
+                            setDurationGame,
                             // time,
                             // setTime,
                             widthBoard,

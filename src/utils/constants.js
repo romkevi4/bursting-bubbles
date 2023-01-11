@@ -1,4 +1,4 @@
-const colors = [
+const COLORS = [
     '#ba55d3', '#41c01e', '#ca751e', '#085830FF', '#bc8f8f', '#fa8072',
     '#6ecbf1', '#400164', '#a52a2a', '#008080', '#000080', '#808000',
     '#98FB98', '#0b2f71', '#00BFFF', '#660a7b', '#4169E1', '#7B68EE',
@@ -8,8 +8,6 @@ const colors = [
     '#0273C5FF', '#F16363FF', '#0F7F47FF', '#07e5cb', '#E5E015FF', '#189086FF',
     '#053e19', '#0b6663', '#411E5AFF', '#a70c5a', '#5A1D1DFF', '#945B07FF'
 ];
-
-const countdownText = ['3', '2', '1', 'Go!'];
 
 const MIN_DURATION = 10;
 const MAX_DURATION = 20;
@@ -29,9 +27,16 @@ const MAX_SIZE_BUBBLE = 1;
 const MIN_SIZE_CIRCLE = 10;
 const MAX_SIZE_CIRCLE = 60;
 
+const COUNTDOWN_TEXT = 'Go!';
+const COUNTDOWN_LAST_VALUE = 1;
+
+const GAME_DURATION_10 = 10;
+const GAME_DURATION_20 = 20;
+const GAME_DURATION_30 = 30;
+const GAME_DURATION_60 = 60;
+
 export {
-    colors,
-    countdownText,
+    COLORS,
     MIN_DURATION,
     MAX_DURATION,
     MIN_DELAY,
@@ -43,5 +48,11 @@ export {
     MIN_SIZE_BUBBLE,
     MAX_SIZE_BUBBLE,
     MIN_SIZE_CIRCLE,
-    MAX_SIZE_CIRCLE
+    MAX_SIZE_CIRCLE,
+    COUNTDOWN_TEXT,
+    COUNTDOWN_LAST_VALUE,
+    GAME_DURATION_10,
+    GAME_DURATION_20,
+    GAME_DURATION_30,
+    GAME_DURATION_60
 };

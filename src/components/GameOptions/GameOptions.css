@@ -33,6 +33,8 @@
 
 .game-options__text {
   margin: auto;
+  width: 100%;
+
   font-family: 'Indie Flower', sans-serif;
   font-size: 50px;
   color: #1f1539;

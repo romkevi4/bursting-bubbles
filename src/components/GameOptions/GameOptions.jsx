@@ -1,30 +1,23 @@
-import React, { useContext } from 'react';
+import React, { useEffect, useContext } from 'react';
 import { Link } from 'react-router-dom';
 
-import Subtitle from '../Subtitle/Subtitle.jsx';
+import Subtitle from '../Subtitle/Subtitle';
 import NavigationBtn from '../NavigationBtn/NavigationBtn';
 
+import {
+    GAME_DURATION_10,
+    GAME_DURATION_20,
+    GAME_DURATION_30,
+    GAME_DURATION_60
+} from '../../utils/constants';
 import { GameContext } from '../../contexts/GameContext';
 
 import './GameOptions.css';
 
 
 export default function GameOptions({ goToStart, goToGame }) {
-    let {
-        isGame,
-        setIsGame,
-        timeGame,
-        setTimeGame,
-        time,
-        setTime,
-        handleStartGame
-    } = useContext(GameContext);
+    const { handleStartGame } = useContext(GameContext);
 
-    // const handleStartGame = (value) => {
-    //     setIsGame(true);
-    //     setTimeGame(value);
-    //     setInterval(decreaseTime, 1000);
-    // }
 
     // function decreaseTime() {
     //     if (timeGame !== 0) {
@@ -51,7 +44,7 @@ export default function GameOptions({ goToStart, goToGame }) {
             <div className="game-options__box">
                 <Link
                     to={goToGame}
-                    onClick={() => handleStartGame(10)}
+                    onClick={() => handleStartGame(GAME_DURATION_10)}
                     className="game-options__time"
                 >
                     <p className="game-options__text">10 sec</p>
@@ -59,7 +52,7 @@ export default function GameOptions({ goToStart, goToGame }) {
 
                 <Link
                     to={goToGame}
-                    onClick={() => handleStartGame(20)}
+                    onClick={() => handleStartGame(GAME_DURATION_20)}
                     className="game-options__time"
                 >
                     <p className="game-options__text">20 sec</p>
@@ -67,7 +60,7 @@ export default function GameOptions({ goToStart, goToGame }) {
 
                 <Link
                     to={goToGame}
-                    onClick={() => handleStartGame(30)}
+                    onClick={() => handleStartGame(GAME_DURATION_30)}
                     className="game-options__time"
                 >
                     <p className="game-options__text">30 sec</p>
@@ -75,7 +68,7 @@ export default function GameOptions({ goToStart, goToGame }) {
 
                 <Link
                     to={goToGame}
-                    onClick={() => handleStartGame(60)}
+                    onClick={() => handleStartGame(GAME_DURATION_60)}
                     className="game-options__time"
                 >
                     <p className="game-options__text">60 sec</p>
