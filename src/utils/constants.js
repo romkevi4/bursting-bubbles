@@ -35,6 +35,8 @@ const GAME_DURATION_20 = 20;
 const GAME_DURATION_30 = 30;
 const GAME_DURATION_60 = 60;
 
+const DELAY = 1000;
+
 export {
     COLORS,
     MIN_DURATION,
@@ -54,5 +56,6 @@ export {
     GAME_DURATION_10,
     GAME_DURATION_20,
     GAME_DURATION_30,
-    GAME_DURATION_60
+    GAME_DURATION_60,
+    DELAY
 };

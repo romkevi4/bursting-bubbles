@@ -6,7 +6,7 @@ import './Score.css';
 
 
 export default function Score() {
-    const { isStart } = useContext(GameContext);
+    const { isStart, score } = useContext(GameContext);
 
     const scoreStyles = {
         score: () => {
@@ -20,7 +20,7 @@ export default function Score() {
     return (
         <h2 className="score" style={scoreStyles.score()}>
             <p className="score__title">Score:&nbsp;</p>
-            <span className="score__value">100</span>
+            <span className="score__value">{score}</span>
         </h2>
     )
 }

@@ -17,11 +17,11 @@ export default function App() {
 
     const [ durationGame, setDurationGame ] = useState(0);
     const [ isGame, setIsGame ] = useState(false);
-
-
-
-
     const [ score, setScore ] = useState(0);
+
+
+
+
     const [ time, setTime ] = useState(0);
     const [ widthBoard, setWidthBoard ] = useState(0);
     const [ heightBoard, setHeightBoard ] = useState(0);
@@ -31,26 +31,6 @@ export default function App() {
         setIsStart(true);
         setDurationGame(value);
     }
-
-    // useEffect(() =>
-    //     const interval = setInterval(() => {
-    //         console.log(countdownValue);
-    //
-    //         if (countdownValue === 'Go!') {
-    //             setIsCountdown(false);
-    //             clearInterval(interval);
-    //
-    //         } else if (countdownValue === 1) {
-    //             setCountdownValue('Go!');
-    //
-    //         } else {
-    //             let value = countdownValue - 1;
-    //             setCountdownValue(value);
-    //         }
-    //     }, 1000);
-    //
-    //     return () => clearInterval(interval);
-    // }, [countdownValue]);
 
 
 

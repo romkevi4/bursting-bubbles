@@ -9,7 +9,7 @@ import NavigationBtn from '../NavigationBtn/NavigationBtn';
 import Countdown from './Countdown/Countdown';
 import Timer from './Timer/Timer';
 
-import { COUNTDOWN_TEXT, COUNTDOWN_LAST_VALUE, GAME_DURATION_10 } from '../../utils/constants';
+import { COUNTDOWN_TEXT, COUNTDOWN_LAST_VALUE, DELAY } from '../../utils/constants';
 import { GameContext } from '../../contexts/GameContext';
 
 import './Game.css'
@@ -36,75 +36,90 @@ export default function Game({ goToStart, goToGameOptions }) {
     } = useContext(GameContext);
 
     useEffect(() => {
-        const interval = setInterval(() => {
-            console.log(countdownValue);
+        console.log(countdownValue);
 
-            if (countdownValue === COUNTDOWN_TEXT) {
+        const countdown = () => {
+            if (countdownValue === COUNTDOWN_LAST_VALUE) {
+                setCountdownValue('Go!');
+
+            } else if (countdownValue === COUNTDOWN_TEXT) {
                 setIsCountdown(false);
                 setIsStart(false);
                 setIsGame(true);
-                clearInterval(interval);
-
-                // const timer = setInterval(() => {
-                //     console.log(durationGame);
-                //
-                //     if (durationGame === 0) {
-                //         clearInterval(timer);
-                //         setIsGame(false);
-                //
-                //     } else {
-                //         let value = durationGame - 1;
-                //         setDurationGame(value);
-                //     }
-                // }, 1000);
-                //
-                // return () => clearInterval(timer);
-
-            } else if (countdownValue === COUNTDOWN_LAST_VALUE) {
-                setCountdownValue('Go!');
+                clearInterval(intervalId);
 
             } else {
-                let value = countdownValue - 1;
-                setCountdownValue(value);
+                setCountdownValue(countdownValue - 1);
             }
-        }, 1000);
+        }
 
-        return () => clearInterval(interval);
+        const intervalId = setInterval(countdown, DELAY);
+
+
+
+        return () => clearInterval(intervalId);
     }, [countdownValue]);
 
     useEffect(() => {
-        const timer = setInterval(() => {
-            console.log(durationGame);
+        console.log(durationGame);
+        console.log(isGame);
 
-            if (durationGame === 0) {
-                clearInterval(timer);
-                setIsGame(false);
+        // уменьшать время на единицу
+        const tick = () => {
+            setDurationGame(durationGame - 1);
+        };
 
-            } else {
-                let value = durationGame - 1;
-                setDurationGame(value);
-            }
-        }, 1000);
+        // старт
+        const timerId = setInterval(tick, DELAY);
 
-        return () => clearInterval(timer);
-    }, [durationGame]);
+        // остановить если время истекло
+        if (durationGame === 0) {
+            clearInterval(timerId);
+            setIsGame(false);
+        }
 
-    // function onTimer() {
+        // очистить интервал
+        return () => clearInterval(timerId);
+    }, [durationGame, isGame]);
+
+
+
+
+
+
+
+    // useEffect(() => {
+    //
+    //
     //     const timer = setInterval(() => {
     //         console.log(durationGame);
     //
-    //         if (countdownValue === COUNTDOWN_TEXT) {
-    //             setIsCountdown(false);
+    //         if (durationGame === 0) {
     //             clearInterval(timer);
-    //
-    //         } else if (countdownValue === COUNTDOWN_LAST_VALUE) {
-    //             setCountdownValue('Go!');
+    //             setIsGame(false);
     //
     //         } else {
     //             let value = durationGame - 1;
     //             setDurationGame(value);
     //         }
     //     }, 1000);
+    //
+    //     return () => clearInterval(timer);
+    // }, [durationGame]);
+
+    // function onTimer() {
+    //     const timer = setInterval(() => {
+    //         console.log(durationGame);
+    //
+    //         if (durationGame === 0) {
+    //             clearInterval(timer);
+    //             setIsGame(false);
+    //
+    //         } else {
+    //             let value = durationGame - 1;
+    //             setDurationGame(value);
+    //         }
+    //     }, DELAY);
     //
     //     return () => clearInterval(timer);
     // }
