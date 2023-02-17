@@ -7,6 +7,7 @@ const store = configureStore({
     reducer: {
         gameOptions: gameOptionsReducer,
     },
+    devTools: true,
 });
 
 export default store;

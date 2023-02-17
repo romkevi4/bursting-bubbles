@@ -1,5 +1,8 @@
 import React, { useEffect, useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+
+import { handleStartGame } from '../../store/slices/gameOptionsSlice';
 
 import Subtitle from '../Subtitle/Subtitle';
 import NavigationBtn from '../NavigationBtn/NavigationBtn';
@@ -18,6 +21,7 @@ import './GameOptions.css';
 export default function GameOptions({ goToStart, goToGame }) {
     const { handleStartGame } = useContext(GameContext);
 
+    const dispatch = useDispatch();
 
     // function decreaseTime() {
     //     if (timeGame !== 0) {

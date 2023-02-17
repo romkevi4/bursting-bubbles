@@ -56,7 +56,6 @@ export default function Game({ goToStart, goToGameOptions }) {
         const intervalId = setInterval(countdown, DELAY);
 
 
-
         return () => clearInterval(intervalId);
     }, [countdownValue]);
 

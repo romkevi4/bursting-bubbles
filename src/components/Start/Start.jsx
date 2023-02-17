@@ -15,7 +15,6 @@ export default function Start({ goToGameOptions }) {
             <NavigationBtn
                 goToPage={goToGameOptions}
                 nameBtn="Start game"
-                modifierClass=""
             />
 
             <Bubbles />

@@ -1,17 +1,24 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-    value: [],
-}
+    countdown: false,
+    isStart: false,
+    durationGame: 0,
+};
 
 const gameOptionsSlice = createSlice({
     name: 'gameOptions',
     initialState,
     reducers: {
-        increment: state => state.value + 1,
-        decrement: state => state.value - 1, // для примера increment и decrement
+        handleStartGame(state, action) {
+            state.countdown = action.payload.countdown;
+            state.isStart = action.payload.isStart;
+            state.durationGame = action.payload.durationGame;
+        },
     },
 });
 
-export const { increment, decrement } = gameOptionsSlice.actions;
+// const { gameOptionsActions, gameOptionsReducer } = gameOptionsSlice;
+
+export const { handleStartGame } = gameOptionsSlice.actions;
 export default gameOptionsSlice.reducer;
