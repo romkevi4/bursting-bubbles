@@ -1,8 +1,8 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-    countdown: false,
-    isStart: false,
+    isCountdown: false,
+    isDisplay: false,
     durationGame: 0,
 };
 
@@ -10,15 +10,19 @@ const gameOptionsSlice = createSlice({
     name: 'gameOptions',
     initialState,
     reducers: {
-        handleStartGame(state, action) {
-            state.countdown = action.payload.countdown;
-            state.isStart = action.payload.isStart;
+        handleCountdown(state, action) {
+            state.isCountdown = action.payload.isCountdown;
+        },
+
+        handleDisplayCircles(state, action) {
+            state.isDisplay = action.payload.isDisplay;
+        },
+
+        handleDurationGame(state, action) {
             state.durationGame = action.payload.durationGame;
         },
     },
 });
 
-// const { gameOptionsActions, gameOptionsReducer } = gameOptionsSlice;
-
-export const { handleStartGame } = gameOptionsSlice.actions;
+export const { handleCountdown, handleDisplayCircles, handleDurationGame } = gameOptionsSlice.actions;
 export default gameOptionsSlice.reducer;

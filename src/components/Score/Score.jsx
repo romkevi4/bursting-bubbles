@@ -1,22 +1,25 @@
-import React, { useContext } from 'react';
-
-import { GameContext } from '../../contexts/GameContext';
+import { useSelector } from 'react-redux';
 
 import './Score.css';
 
 
 export default function Score() {
-    const { isStart, score } = useContext(GameContext);
+    const { isHideScore, score } = useSelector(state => ({
+        isHideScore: state.game.isHideScore,
+        score: state.game.score,
+    }));
+
+    console.log(score);
 
     const scoreStyles = {
         score: () => {
             return {
-                display: `${isStart ? 'none' : 'flex'}`
+                display: `${isHideScore ? 'none' : 'flex'}`
             }
         }
     }
 
-    //TODO: добавить параграф p в h2
+
     return (
         <h2 className="score" style={scoreStyles.score()}>
             <p className="score__title">Score:&nbsp;</p>
