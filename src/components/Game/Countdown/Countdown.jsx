@@ -34,15 +34,15 @@ export default function Countdown() {
                 setGameCountdown({
                     isCountdown: false,
                 });
-                setDisplayCircle({
-                    isDisplay: true,
-                });
                 setGame({
                     isGame: true,
                     isHideScore: true,
                 });
                 setTimer({
                     isStart: true,
+                });
+                setDisplayCircle({
+                    isDisplay: true,
                 });
 
                 clearInterval(intervalId);

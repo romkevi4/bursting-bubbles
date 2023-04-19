@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { handleCountdown, handleDisplayCircles, handleDurationGame } from '../../store/slices/gameOptionsSlice';
@@ -14,8 +15,10 @@ import './Game.css'
 
 
 export default function Game({ goToStart, goToGameOptions }) {
+    const [ stylesParameters, setStylesParameters ] = useState({});
+    const isGame = useSelector(state => state.game.isGame);z
+
     const dispatch = useDispatch();
-    const isGame = useSelector(state => state.game.isGame);
 
     const setGameCountdown = (obj) => dispatch(handleCountdown(obj));
     const setGameDisplayCircle = (obj) => dispatch(handleDisplayCircles(obj));
@@ -23,6 +26,12 @@ export default function Game({ goToStart, goToGameOptions }) {
     const setGameTimer = (obj) => dispatch(handleDurationGame(obj));
     const setTimer = (obj) => dispatch(handleTimer(obj));
     const setScore = (obj) => dispatch(handleScore(obj));
+
+    // async function getStylesOfCircle(obj) {
+    //     await setStylesParameters(obj);
+    // }
+
+    // const promiseCircleStyles = new Promise((res, rej) => {});
 
     function onFinishGame() {
         console.log('сброс');
@@ -59,7 +68,13 @@ export default function Game({ goToStart, goToGameOptions }) {
                 <Countdown />
 
                 {
-                    isGame ? <Circle /> : <Score />
+                    isGame
+                        ? <Circle
+                            stylesParameters={stylesParameters}
+                            setStylesParameters={setStylesParameters}
+                            // promiseCircleStyles={promiseCircleStyles}
+                        />
+                        : <Score />
                 }
             </div>
 

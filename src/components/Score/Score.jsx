@@ -9,19 +9,18 @@ export default function Score() {
         score: state.game.score,
     }));
 
-    console.log(score);
-
-    const scoreStyles = {
+    const styles = {
         score: () => {
             return {
                 display: `${isHideScore ? 'none' : 'flex'}`
             }
         }
     }
+    const scoreStyles = styles.score();
 
 
     return (
-        <h2 className="score" style={scoreStyles.score()}>
+        <h2 className="score" style={scoreStyles}>
             <p className="score__title">Score:&nbsp;</p>
             <span className="score__value">{score}</span>
         </h2>
