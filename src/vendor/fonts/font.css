@@ -1,0 +1,24 @@
+/* LuckiestGuy */
+@font-face {
+  font-family: 'LuckiestGuy';
+  font-style:  normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("LuckiestGuy-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'TitanOne-Regular';
+  font-style:  normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("TitanOne-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'Indie Flower';
+  font-style:  normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("IndieFlower-Regular.ttf") format("truetype");
+}

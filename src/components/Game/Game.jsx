@@ -16,7 +16,7 @@ import './Game.css'
 
 export default function Game({ goToStart, goToGameOptions }) {
     const [ stylesParameters, setStylesParameters ] = useState({});
-    const isGame = useSelector(state => state.game.isGame);z
+    const isGame = useSelector(state => state.game.isGame);
 
     const dispatch = useDispatch();
 
