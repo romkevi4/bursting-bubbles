@@ -5,7 +5,6 @@ const initialState = {
     isHideScore: true,
     isStart: false,
     score: 0,
-    // stylesParameters: [],
 };
 
 const gameSlice = createSlice({
@@ -24,25 +23,8 @@ const gameSlice = createSlice({
         handleTimer(state, action) {
             state.isStart = action.payload.isStart;
         },
-
-        // handleCircleStyles(state, action) {
-        //     state.stylesParameters.push({
-        //         display: action.payload.stylesParameters.display,
-        //         width: action.payload.stylesParameters.width,
-        //         height: action.payload.stylesParameters.height,
-        //         background: action.payload.stylesParameters.background,
-        //         boxShadow: action.payload.stylesParameters.boxShadow,
-        //         left: action.payload.stylesParameters.left,
-        //         top: action.payload.stylesParameters.top,
-        //     });
-        // }
     },
 });
 
-export const {
-    handleGame,
-    handleScore,
-    handleTimer,
-    // handleCircleStyles
-} = gameSlice.actions;
+export const { handleGame, handleScore, handleTimer } = gameSlice.actions;
 export default gameSlice.reducer;

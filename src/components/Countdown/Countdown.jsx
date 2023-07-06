@@ -1,15 +1,15 @@
 import { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
-import { handleCountdown, handleDisplayCircles } from '../../../store/slices/gameOptionsSlice';
-import { handleGame, handleTimer } from '../../../store/slices/gameSlice';
+import { handleCountdown, handleDisplayCircles } from '../../store/slices/gameOptionsSlice';
+import { handleGame, handleTimer } from '../../store/slices/gameSlice';
 
 import {
     COUNTDOWN_INITIAL_VALUE,
     COUNTDOWN_LAST_VALUE,
     COUNTDOWN_TEXT,
     SET_INTERVAL_DELAY
-} from '../../../utils/constants';
+} from '../../utils/constants';
 
 import './Countdown.css';
 

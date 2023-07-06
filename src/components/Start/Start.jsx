@@ -1,4 +1,4 @@
-import Bubbles from './Bubbles/Bubbles';
+import Bubbles from '../Bubbles/Bubbles';
 import NavigationBtn from '../NavigationBtn/NavigationBtn';
 
 import './Start.css';

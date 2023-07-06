@@ -8,9 +8,7 @@
   top: 0;
   left: 0;
   z-index: 1;
-  /*visibility: hidden;*/
   opacity: 1;
-  /*transition: visibility 0s .4s, opacity .4s 0s, z-index 0s .4s;*/
 }
 
 .countdown_active {

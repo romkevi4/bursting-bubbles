@@ -10,7 +10,7 @@ import {
     MAX_POSITION,
     MIN_SIZE_BUBBLE,
     MAX_SIZE_BUBBLE
-} from '../../../utils/constants';
+} from '../../utils/constants';
 
 import './Bubbles.css';
 

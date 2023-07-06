@@ -7,8 +7,3 @@
   display: flex;
   transition: width .3s linear 300ms, height .3s linear 300ms;
 }
-
-.circle:hover {
-  /*width: 200px;*/
-  /*height: 200px;*/
-}

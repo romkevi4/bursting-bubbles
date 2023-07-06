@@ -1,10 +1,10 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
-import { handleDisplayCircles, handleDurationGame } from '../../../store/slices/gameOptionsSlice';
-import { handleGame } from '../../../store/slices/gameSlice';
+import { handleDisplayCircles, handleDurationGame } from '../../store/slices/gameOptionsSlice';
+import { handleGame } from '../../store/slices/gameSlice';
 
-import { GAME_DURATION_10, SET_INTERVAL_DELAY } from '../../../utils/constants';
+import { GAME_DURATION_10, SET_INTERVAL_DELAY } from '../../utils/constants';
 
 import './Timer.css';
 
