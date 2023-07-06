@@ -1,0 +1,23 @@
+/* Score */
+.score {
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.score__title {
+  margin: 0 10px 0 0;
+
+  font-family: 'TitanOne-Regular', sans-serif;
+  color: #1f1539;
+  font-size: 50px;
+  font-weight: normal;
+}
+
+.score__value {
+  margin: 0;
+
+  font-family: 'Indie Flower', sans-serif;
+  color: #16D9E3;
+  font-size: 70px;
+}
