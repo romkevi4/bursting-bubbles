@@ -1,11 +1,16 @@
 /* Game-options */
 .game-options {
   margin: auto;
-  max-width: 732px;
+  max-width: 1000px;
   width: 95%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
 }
 
 .game-options__box {
+  margin: 50px 0 0;
   max-width: 732px;
   width: 100%;
   display: flex;

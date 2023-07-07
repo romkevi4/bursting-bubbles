@@ -28,7 +28,7 @@ export default function GameOptions({ goToStart, goToGame }) {
     return (
         <div className="game-options">
             <Subtitle>
-                Select game time
+                Choose a time, pop bubbles, and score as many points as possible
             </Subtitle>
 
             <div className="game-options__box">
