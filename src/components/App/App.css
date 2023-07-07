@@ -1,6 +1,9 @@
 /* App */
 .app {
   margin: 0;
+  max-width: 2560px;
+  min-width: 320px;
+  width: 100%;
   height: 100vh;
 
   font-family: 'LuckiestGuy', 'Indie Flower', 'Khula', sans-serif;

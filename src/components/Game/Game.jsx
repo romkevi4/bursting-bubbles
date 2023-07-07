@@ -28,7 +28,6 @@ export default function Game({ goToStart, goToGameOptions }) {
     const setScore = (obj) => dispatch(handleScore(obj));
 
     function onFinishGame() {
-        console.log('сброс');
         setGameCountdown({
             isCountdown: false,
         });

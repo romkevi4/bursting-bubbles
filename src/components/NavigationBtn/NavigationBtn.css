@@ -29,3 +29,44 @@
   top: 50px;
   right: 50px;
 }
+
+
+/* Search for PC */
+@media screen and (max-width: 1024px) {
+  .navigation-btn {
+    font-size: 70px;
+  }
+}
+
+/* Search for tablet */
+@media screen and (max-width: 768px) {
+  .navigation-btn {
+    font-size: 60px;
+  }
+}
+
+/* Search for phone */
+@media screen and (max-width: 680px) {
+  .navigation-btn {
+    font-size: 50px;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .navigation-btn {
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .navigation-btn {
+    font-size: 30px;
+  }
+}
+
+
+@media screen and (max-width: 380px) {
+  .navigation-btn {
+    font-size: 20px;
+  }
+}

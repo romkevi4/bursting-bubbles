@@ -1,9 +1,13 @@
 /* Game-options */
 .game-options {
   margin: auto;
+  max-width: 732px;
+  width: 95%;
 }
 
 .game-options__box {
+  max-width: 732px;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -12,8 +16,8 @@
 .game-options__time {
   margin: 0;
   padding: 0;
-  width: 160px;
-  height: 70px;
+  width: 20%;
+  max-height: 70px;
 
   display: flex;
 
@@ -44,4 +48,38 @@
 
 .game-options__text:hover {
   color: #16D9E3;
+}
+
+
+/* Search for tablet */
+@media screen and (max-width: 960px) {
+  .game-options__text {
+    font-size: 45px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .game-options__text {
+    font-size: 40px;
+  }
+}
+
+/* Search for phone */
+@media screen and (max-width: 580px) {
+  .game-options__text {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .game-options__text {
+    font-size: 25px;
+  }
+}
+
+
+@media screen and (max-width: 380px) {
+  .game-options__text {
+    font-size: 20px;
+  }
 }

@@ -1,15 +1,50 @@
 /* Subtitle */
 .subtitle {
-  margin: 0 0 80px;
-  min-width: 720px;
-  min-height: 145px;
+  margin: 0 auto 80px;
+  width: 100%;
+  max-height: 145px;
 
   font-family: 'TitanOne-Regular', sans-serif;
   color: #fff;
-  font-size: 80px;
+  font-size: 75px;
   font-weight: normal;
 
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+
+/* Search for tablet */
+@media screen and (max-width: 960px) {
+  .subtitle {
+    font-size: 70px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .subtitle {
+    margin-bottom: 60px;
+    font-size: 60px;
+  }
+}
+
+/* Search for phone */
+@media screen and (max-width: 580px) {
+  .subtitle {
+    font-size: 50px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .subtitle {
+    margin-bottom: 40px;
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .subtitle {
+    font-size: 30px;
+  }
 }
