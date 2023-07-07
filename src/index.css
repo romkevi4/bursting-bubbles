@@ -3,3 +3,9 @@
 
 /* Fonts */
 @import url(./vendor/fonts/font.css);
+
+#root {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(90deg, #263f3f 0%, #3b6363 100%);
+}
