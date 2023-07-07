@@ -1,16 +1,70 @@
 /* Start */
 .start {
   margin: auto;
+  width: 90%;
   position: relative;
   display: flex;
   flex-direction: column;
 }
 
 .start__title {
-  margin: 0 0 100px;
+  margin: 0 auto 100px;
+  width: 100%;
 
   font-family: 'LuckiestGuy', sans-serif;
   color: #fff;
-  font-size: 200px;
+  font-size: 180px;
   letter-spacing: 10px;
+}
+
+
+/* Search for PC */
+@media screen and (max-width: 1024px) {
+  .start__title {
+    margin-bottom: 80px;
+    font-size: 160px;
+  }
+}
+
+/* Search for tablet */
+@media screen and (max-width: 960px) {
+  .start__title {
+    font-size: 130px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .start__title {
+    font-size: 120px;
+    letter-spacing: 8px;
+  }
+}
+
+/* Search for phone */
+@media screen and (max-width: 680px) {
+  .start__title {
+    font-size: 100px;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .start__title {
+    margin-bottom: 50px;
+    font-size: 80px;
+    letter-spacing: 6px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .start__title {
+    font-size: 60px;
+  }
+}
+
+
+@media screen and (max-width: 380px) {
+  .start__title {
+    margin-bottom: 30px;
+    font-size: 40px;
+  }
 }

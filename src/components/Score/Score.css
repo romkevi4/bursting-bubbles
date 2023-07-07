@@ -21,3 +21,26 @@
   color: #16D9E3;
   font-size: 70px;
 }
+
+
+/* Search for tablet */
+@media screen and (max-width: 960px) {
+  .score__title {
+    font-size: 40px;
+  }
+
+  .score__value {
+    font-size: 60px;
+  }
+}
+
+/* Search for phone */
+@media screen and (max-width: 680px) {
+  .score__title {
+    font-size: 30px;
+  }
+
+  .score__value {
+    font-size: 50px;
+  }
+}

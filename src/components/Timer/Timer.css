@@ -1,11 +1,59 @@
 /* Timer */
 .timer {
   margin: 0;
-  min-width: 290px;
+  max-width: 290px;
+  /*width: 100%;*/
 
   font-family: Indie Flower, sans-serif;
   font-size: 145px;
   line-height: 1;
   color: #16D9E3;
   text-align: left;
+}
+
+
+/* Search for PC */
+@media screen and (max-width: 1280px) {
+  .timer {
+    font-size: 120px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .timer {
+    font-size: 100px;
+  }
+}
+
+/* Search for tablet */
+@media screen and (max-width: 960px) {
+  .timer {
+    font-size: 90px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .timer {
+    font-size: 80px;
+  }
+}
+
+/* Search for phone */
+@media screen and (max-width: 680px) {
+  .timer {
+    font-size: 60px;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .timer {
+    font-size: 60px;
+  }
+}
+
+
+@media screen and (max-width: 380px) {
+  .timer {
+    font-size: 50px;
+  }
 }
